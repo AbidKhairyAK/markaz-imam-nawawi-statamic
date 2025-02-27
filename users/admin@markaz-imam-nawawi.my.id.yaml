@@ -1,7 +1,7 @@
-name: Abid
+name: Admin
 super: true
 id: d4fee445-e69f-468a-a1be-90f8685c88fc
-password_hash: $2y$12$suEET7fWLNomum6E6fQj/ejewtBR7TYdd0kFa1ZONbffpbjJunsDK
+password_hash: $2y$12$dJE1jOu7qBnsVFOJepeSIeN6ZSEpvAa5/IAk60MQcgubhWR3cqd/e
 preferences:
   collections:
     program_kami:
@@ -22,3 +22,4 @@ preferences:
         - status
   locale: en
   favorites: {  }
+  start_page: collections
