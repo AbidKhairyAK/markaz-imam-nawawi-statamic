@@ -1,0 +1,16 @@
+title: 'Aktifitas Pondok'
+template: aktifitas_pondok/show
+layout: layout
+mount: 3ab2fb17-cf91-4800-b975-0bb371723499
+revisions: false
+route: '/aktifitas-pondok/{slug}'
+date: true
+sort_dir: desc
+date_behavior:
+  past: public
+  future: private
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true

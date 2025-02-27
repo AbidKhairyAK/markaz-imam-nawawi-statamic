@@ -1,0 +1,28 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: alamat
+            field:
+              type: text
+              display: Alamat
+          -
+            handle: whatsapp_nomor
+            field:
+              type: text
+              display: 'WhatsApp Nomor'
+              instructions: 'dimulai dengan +62 tanpa spasi'
+          -
+            handle: whatsapp_nama
+            field:
+              type: text
+              display: 'WhatsApp Nama'
+          -
+            handle: facebook_akun
+            field:
+              type: text
+              display: 'Facebook Akun'
+              instructions: 'yang pakai @'

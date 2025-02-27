@@ -1,0 +1,57 @@
+title: 'Program Kami'
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: kepanjangan
+            field:
+              type: text
+              display: Kepanjangan
+          -
+            handle: deskripsi
+            field:
+              type: text
+              display: Deskripsi
+          -
+            handle: gambar
+            field:
+              container: assets
+              type: assets
+              display: Gambar
+              max_files: 1
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: template
+            field:
+              type: template
+              display: Template
+              localizable: true
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - program_kami
+              max_items: 1
+              listable: false
+              localizable: true

@@ -3,3 +3,34 @@
 @import "tailwindcss/utilities";
 
 /* This is all you. */
+@layer base {
+	html {
+		scroll-behavior: smooth;
+	}
+}
+
+@layer components {
+	.outer-wrapper {
+		position: relative;
+		overflow-x: hidden;
+	}
+
+	.outer-wrapper:before {
+		content: ' ';
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0.2;
+		background-image: url('../../public/assets/static/geometric-pattern.jpg');
+		background-repeat: repeat;
+		background-position: 50% 0;
+		background-size: 400px 400px;
+	}
+
+	.inner-wrapper {
+		position: relative;
+	}
+}

@@ -1,0 +1,64 @@
+hide: true
+title: 'Halaman Utama'
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: banner_utama
+            field:
+              max_files: 1
+              container: assets
+              type: assets
+              display: 'Banner Utama'
+              instructions: 'Gamban utama yang akan muncul saat pertama kali website dibuka. kalau bisa gambarnya landscape / melebar'
+          -
+            handle: tentang_kami
+            field:
+              remove_empty_nodes: false
+              type: bard
+              display: 'Tentang Kami'
+          -
+            handle: gambar_tentang_kami
+            field:
+              max_files: 1
+              container: assets
+              folder: static
+              type: assets
+              display: 'Gambar Tentang Kami'
+              instructions: 'gambar yang muncul di samping konten tentang kami'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: template
+            field:
+              type: template
+              display: Template
+              localizable: true
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - utama
+              max_items: 1
+              listable: false
+              localizable: true
