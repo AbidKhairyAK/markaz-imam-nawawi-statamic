@@ -18,8 +18,37 @@
 				alt="{{ $page->gambar_utama->alt }}">
 		</figure>
 
+		@if ($page->gambar_utama->alt)
+			<p class="text-sm text-gray-500 text-center pt-5">
+				Keterangan:
+				{{ $page->gambar_utama->alt }}
+			</p>
+		@endif
+
 		<div class="prose md:prose-xl max-w-full my-12">
 			{!! $page->konten !!}
+
+			@if ($page->gambar_lainnya)
+				<hr>
+
+				<h3>Gambar Lainnya:</h3>
+
+				<div class="grid md:grid-cols-2 gap-x-12">
+					@foreach ($page->gambar_lainnya as $lainnya)
+						<figure>
+							<img
+								class="w-full max-w-full rounded-xl shadow-lg"
+								src="{{ $lainnya->url }}"
+								alt="{{ $lainnya->alt }}">
+							@if ($lainnya->alt)
+								<p class="text-sm text-gray-500 text-center pt-3">
+									{ $lainnya->alt }}
+								</p>
+							@endif
+						</figure>
+					@endforeach
+				</div>
+			@endif
 
 			<hr>
 
