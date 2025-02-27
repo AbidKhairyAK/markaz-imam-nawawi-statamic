@@ -7,6 +7,14 @@
 	html {
 		scroll-behavior: smooth;
 	}
+
+	input[type="text"],
+	input[type="number"] {
+		@apply input input-bordered max-w-md w-full;
+	}
+	input[type="radio"] {
+		@apply radio mr-4 mt-4 translate-y-[6px];
+	}
 }
 
 @layer components {

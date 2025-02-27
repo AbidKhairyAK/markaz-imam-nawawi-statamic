@@ -6,10 +6,14 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<x-social-meta
-		title="Markaz Imam Nawawi"
-		description="Pesantren Tahfidzul Qur’an Markaz Imam Nawawi Bulukumba adalah sebuah lembaga pendidikan Khusus Tahfidzul Qur’an setingkat SMP, SMA didirikan pada tahun 2018"
-		image="{{ asset('favicon/android-chrome-512x512.png') }}" />
+	@hasSection('meta')
+		@yield('meta')
+	@else
+		<x-social-meta
+			title="Markaz Imam Nawawi"
+			description="Pesantren Tahfidzul Qur’an Markaz Imam Nawawi Bulukumba adalah sebuah lembaga pendidikan Khusus Tahfidzul Qur’an setingkat SMP, SMA didirikan pada tahun 2018"
+			image="{{ asset('favicon/android-chrome-512x512.png') }}" />
+	@endif
 
 	<title>{{ $page->title . ' - ' . $site->name }}</title>
 
@@ -43,14 +47,11 @@
 			<div class="navbar">
 
 				<section class="navbar-start">
-					<a
-						class="flex items-center gap-2"
+					<a class="flex items-center gap-2"
 						href="/">
-						<div
-							class="block overflow-hidden rounded-full shadow-lg"
+						<div class="block overflow-hidden rounded-full shadow-lg"
 							href="#">
-							<img
-								src="{{ asset('assets/static/logo-markaz-imam-nawawi.jpeg') }}"
+							<img src="{{ asset('assets/static/logo-markaz-imam-nawawi.jpeg') }}"
 								class="w-14 scale-105 object-contain">
 						</div>
 						<div class="hidden font-['Bebas_Neue'] leading-none text-white drop-shadow md:block">
@@ -95,9 +96,10 @@
 				</section>
 
 				<section class="navbar-end">
-					<button class="btn btn-secondary rounded-xl font-bold shadow">
+					<a class="btn btn-secondary rounded-xl font-bold shadow"
+						href="/pendaftaran-santri">
 						Pendaftaran
-					</button>
+					</a>
 				</section>
 
 			</div>

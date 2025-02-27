@@ -23,3 +23,10 @@ preferences:
   locale: id
   favorites: {  }
   start_page: collections
+  forms:
+    pendaftaran_santri:
+      columns:
+        - datestamp
+        - nama_lengkap
+        - nomor_whatsapp
+        - program_pilihan

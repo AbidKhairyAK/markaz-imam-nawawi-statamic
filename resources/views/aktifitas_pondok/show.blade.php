@@ -1,5 +1,12 @@
 @extends('layout')
 
+@section('meta')
+	<x-social-meta
+		title="{{ $page->title }} - Markaz Imam Nawawi"
+		description="{!! \Statamic\Statamic::modify($page->konten)->safeTruncate([60, '...']) !!}"
+		image="{{ asset($page->gambar_utama) }}" />
+@endsection
+
 @section('content')
 	<section class="bg-gradient-to-br from-[#369b3a] to-[#00763d] py-12 shadow-2xl md:py-16">
 		<div class="container">

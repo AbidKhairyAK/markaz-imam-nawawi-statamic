@@ -1,0 +1,38 @@
+tabs:
+  main:
+    display: Utama
+    sections:
+      -
+        fields:
+          -
+            handle: nama_lengkap
+            field:
+              type: text
+              display: 'Nama Lengkap'
+              validate:
+                - required
+          -
+            handle: nomor_whatsapp
+            field:
+              input_type: number
+              type: text
+              display: 'Nomor Whatsapp'
+              validate:
+                - required
+          -
+            handle: program_pilihan
+            field:
+              options:
+                -
+                  key: LPQ
+                  value: "LPQ - Lembaga Pendidikan Qur'an."
+                -
+                  key: TPQ
+                  value: "TPQ - Taman Pendidikan Qur'an."
+                -
+                  key: RTQ
+                  value: "RTQ - Rumah Tahfidz Qur'an."
+              type: radio
+              display: 'Program Pilihan'
+              validate:
+                - required
