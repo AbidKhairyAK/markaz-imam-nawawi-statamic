@@ -20,6 +20,6 @@ preferences:
         - author
         - date
         - status
-  locale: en
+  locale: id
   favorites: {  }
   start_page: collections
